@@ -1,0 +1,18 @@
+<div>
+    <h2>Two way binding #1:</h2>
+    <h4> How it really work</h4>
+    <input name="title1" [value]="title1" (input)="title1=$event.target.value">
+    <div>{{title1}}</div>
+    <hr/>
+
+    <h2>Two way binding #2: </h2>
+    <h4>Who can remember 'title1 = $event.target.value' ? ugly? So Angular team invent a new directive for easy to remember.</h4>
+    <input name="title2" [ngModel]="title2" (ngModelChange)="title2=$event">
+    <div>{{title2}}</div>
+    <hr/>
+
+    <h2>Two way binding #3: This is just 'syntactic sugar' of #2 for shorter.</h2>
+    <h4>This is just 'syntactic sugar' of #2 (or #2 is de-sugar of #1)for shorter.</h4>
+    <input name="title3" [(ngModel)]="title3">
+    <div>{{title3}}</div>
+</div>
